@@ -19,6 +19,8 @@ Via Composer
 $ composer require getpop/cope-with-wp
 ```
 
+([PoP](https://github.com/leoloso/PoP) must be installed)
+
 <!--
 ## Usage
 
