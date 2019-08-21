@@ -19,7 +19,7 @@
     "prefer-stable": true,
     "require": {
         "php" : "~7.1",
-        "leoloso/cope-with-wp": "^1.0@dev",
+        "leoloso/cope-with-wp": "^0.4",
         "getpop/migrate-cope-with-wp": "^1.0@dev"
     },
     "require-dev": {
