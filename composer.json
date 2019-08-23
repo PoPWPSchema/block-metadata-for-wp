@@ -25,6 +25,7 @@
     ],
     "require": {
         "php" : "~7.1",
+        "getpop/migrate-block-metadata-for-wp": "^1.0@dev",
         "wpackagist-plugin/block-metadata": "^1.0"
     },
     "require-dev": {
