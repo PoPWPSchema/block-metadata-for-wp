@@ -1,4 +1,4 @@
-# Integration of "COPE with WordPress" with PoP
+# Integration with WordPress plugin "Block Metadata" 
 
 <!--
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -9,14 +9,14 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 -->
 
-Make available the data exporting features from package "COPE with WordPress" through the PoP API
+Make available the data exporting features from WordPress plugin "Block Metadata" through the PoP API
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require getpop/cope-with-wp
+$ composer require getpop/block-metadata-for-wp
 ```
 
 ([PoP](https://github.com/leoloso/PoP) must be installed)
