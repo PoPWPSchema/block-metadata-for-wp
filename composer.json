@@ -1,12 +1,12 @@
 {
-    "name": "getpop/cope-with-wp",
+    "name": "getpop/block-metadata-for-wp",
     "type": "library",
-    "description": "Integration with package \"COPE with WordPress\"",
+    "description": "Integration with WordPress plugin \"Block Metadata\"",
     "keywords": [
         "PoP",
-        "cope-with-wp"
+        "block-metadata-for-wp"
     ],
-    "homepage": "https://github.com/getpop/cope-with-wp",
+    "homepage": "https://github.com/getpop/block-metadata-for-wp",
     "license": "MIT",
     "authors": [
         {
@@ -17,10 +17,15 @@
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
     "require": {
         "php" : "~7.1",
-        "leoloso/cope-with-wp": "^0.4",
-        "getpop/migrate-cope-with-wp": "^1.0@dev"
+        "wpackagist-plugin/block-metadata": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=7.0",
@@ -28,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PoP\\COPEWithWP\\": "src"
+            "PoP\\BlockMetadataWP\\": "src"
         },
         "files": [
             "initialize.php"
@@ -36,7 +41,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "PoP\\COPEWithWP\\": "tests"
+            "PoP\\BlockMetadataWP\\": "tests"
         }
     },
     "scripts": {
