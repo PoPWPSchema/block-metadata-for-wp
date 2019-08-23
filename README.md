@@ -55,17 +55,17 @@ If you discover any security related issues, please email leo@getpop.org instead
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/getpop/cope-with-wp.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/getpop/block-metadata-for-wp.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/getpop/cope-with-wp/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/cope-with-wp.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/cope-with-wp.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/getpop/cope-with-wp.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/getpop/block-metadata-for-wp/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/block-metadata-for-wp.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/block-metadata-for-wp.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/getpop/block-metadata-for-wp.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/getpop/cope-with-wp
-[link-travis]: https://travis-ci.org/getpop/cope-with-wp
-[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/cope-with-wp/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/getpop/cope-with-wp
-[link-downloads]: https://packagist.org/packages/getpop/cope-with-wp
+[link-packagist]: https://packagist.org/packages/getpop/block-metadata-for-wp
+[link-travis]: https://travis-ci.org/getpop/block-metadata-for-wp
+[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/block-metadata-for-wp/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/getpop/block-metadata-for-wp
+[link-downloads]: https://packagist.org/packages/getpop/block-metadata-for-wp
 [link-author]: https://github.com/leoloso
 [link-contributors]: ../../contributors
