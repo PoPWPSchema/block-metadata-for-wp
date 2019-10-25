@@ -1,0 +1,4 @@
+services:
+    PoP\BlockMetadataWP\FieldValueResolvers\:
+        resource: '../src/FieldValueResolvers/*'
+        public: true
