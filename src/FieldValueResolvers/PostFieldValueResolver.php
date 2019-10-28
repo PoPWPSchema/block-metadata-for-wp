@@ -48,7 +48,6 @@ class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
                             SchemaDefinition::ARGNAME_NAME => 'blockname',
                             SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_STRING,
                             SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Fetch only the block with this name in the post, filtering out all other blocks', 'block-metadata'),
-                            SchemaDefinition::ARGNAME_MANDATORY => true,
                         ],
                     ];
         }
