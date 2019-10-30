@@ -5,12 +5,13 @@ use PoP\ComponentModel\Facades\Schema\FieldQueryInterpreterFacade;
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\ComponentModel\FieldValueResolvers\AbstractDBDataFieldValueResolver;
 use PoP\ComponentModel\FieldResolvers\FieldResolverInterface;
+use PoP\Posts\FieldResolvers\PostFieldResolver;
 
 class TryNewFeaturesPostFieldValueResolver extends AbstractDBDataFieldValueResolver
 {
     public static function getClassesToAttachTo(): array
     {
-        return array(\PoP\Posts\FieldResolver_Posts::class);
+        return array(PostFieldResolver::class);
     }
 
     public function resolveCanProcess(FieldResolverInterface $fieldResolver, string $fieldName, array $fieldArgs = []): bool

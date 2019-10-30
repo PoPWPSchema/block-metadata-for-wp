@@ -6,12 +6,13 @@ use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\ComponentModel\FieldValueResolvers\AbstractDBDataFieldValueResolver;
 use PoP\ComponentModel\FieldResolvers\FieldResolverInterface;
+use PoP\Posts\FieldResolvers\PostFieldResolver;
 
 class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
 {
     public static function getClassesToAttachTo(): array
     {
-        return array(\PoP\Posts\FieldResolver_Posts::class);
+        return array(PostFieldResolver::class);
     }
 
     public static function getFieldNamesToResolve(): array
