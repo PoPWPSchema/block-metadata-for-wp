@@ -22,24 +22,24 @@ class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
         ];
     }
 
-    public function getFieldDocumentationType(FieldResolverInterface $fieldResolver, string $fieldName): ?string
+    public function getSchemaFieldType(FieldResolverInterface $fieldResolver, string $fieldName): ?string
     {
         $types = [
 			'block-metadata' => SchemaDefinition::TYPE_OBJECT,
         ];
-        return $types[$fieldName] ?? parent::getFieldDocumentationType($fieldResolver, $fieldName);
+        return $types[$fieldName] ?? parent::getSchemaFieldType($fieldResolver, $fieldName);
     }
 
-    public function getFieldDocumentationDescription(FieldResolverInterface $fieldResolver, string $fieldName): ?string
+    public function getSchemaFieldDescription(FieldResolverInterface $fieldResolver, string $fieldName): ?string
     {
         $translationAPI = TranslationAPIFacade::getInstance();
         $descriptions = [
 			'block-metadata' => $translationAPI->__('Metadata for all blocks contained in the post, split on a block by block basis', 'pop-block-metadata'),
         ];
-        return $descriptions[$fieldName] ?? parent::getFieldDocumentationDescription($fieldResolver, $fieldName);
+        return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($fieldResolver, $fieldName);
     }
 
-    public function getFieldDocumentationArgs(FieldResolverInterface $fieldResolver, string $fieldName): array
+    public function getSchemaFieldArgs(FieldResolverInterface $fieldResolver, string $fieldName): array
     {
         $translationAPI = TranslationAPIFacade::getInstance();
         switch ($fieldName) {
@@ -53,7 +53,7 @@ class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
                     ];
         }
 
-        return parent::getFieldDocumentationArgs($fieldResolver, $fieldName);
+        return parent::getSchemaFieldArgs($fieldResolver, $fieldName);
     }
 
     public function resolveValue(FieldResolverInterface $fieldResolver, $resultItem, string $fieldName, array $fieldArgs = [])
