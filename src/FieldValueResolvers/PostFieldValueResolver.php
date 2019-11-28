@@ -56,7 +56,7 @@ class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
         return parent::getSchemaFieldArgs($fieldResolver, $fieldName);
     }
 
-    public function resolveValue(FieldResolverInterface $fieldResolver, $resultItem, string $fieldName, array $fieldArgs = [])
+    public function resolveValue(FieldResolverInterface $fieldResolver, $resultItem, string $fieldName, array $fieldArgs = [], ?array $variables = null, ?array $expressions = null, array $options = [])
     {
         $post = $resultItem;
         switch ($fieldName) {
@@ -76,6 +76,6 @@ class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
                 return $block_metadata;
         }
 
-        return parent::resolveValue($fieldResolver, $resultItem, $fieldName, $fieldArgs);
+        return parent::resolveValue($fieldResolver, $resultItem, $fieldName, $fieldArgs, $variables, $expressions, $options);
     }
 }

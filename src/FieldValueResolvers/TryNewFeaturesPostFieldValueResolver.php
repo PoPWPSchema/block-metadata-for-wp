@@ -43,15 +43,15 @@ class TryNewFeaturesPostFieldValueResolver extends AbstractDBDataFieldValueResol
         return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($fieldResolver, $fieldName);
     }
 
-    public function resolveValue(FieldResolverInterface $fieldResolver, $resultItem, string $fieldName, array $fieldArgs = [])
+    public function resolveValue(FieldResolverInterface $fieldResolver, $resultItem, string $fieldName, array $fieldArgs = [], ?array $variables = null, ?array $expressions = null, array $options = [])
     {
         switch ($fieldName) {
             case 'content':
                 unset($fieldArgs['branch']);
                 unset($fieldArgs['project']);
-                return $fieldResolver->resolveValue($resultItem, FieldQueryInterpreterFacade::getInstance()->getField('block-metadata', $fieldArgs));
+                return $fieldResolver->resolveValue($resultItem, FieldQueryInterpreterFacade::getInstance()->getField('block-metadata', $fieldArgs), $variables, $expressions, $options);
         }
 
-        return parent::resolveValue($fieldResolver, $resultItem, $fieldName, $fieldArgs);
+        return parent::resolveValue($fieldResolver, $resultItem, $fieldName, $fieldArgs, $variables, $expressions, $options);
     }
 }
