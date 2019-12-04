@@ -1,14 +1,14 @@
 <?php
-namespace PoP\BlockMetadataWP\FieldValueResolvers;
+namespace PoP\BlockMetadataWP\FieldResolvers;
 use Leoloso\BlockMetadata\Data;
 use Leoloso\BlockMetadata\Metadata;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\Schema\SchemaDefinition;
-use PoP\ComponentModel\FieldValueResolvers\AbstractDBDataFieldValueResolver;
+use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\Posts\TypeResolvers\PostTypeResolver;
 
-class PostFieldValueResolver extends AbstractDBDataFieldValueResolver
+class PostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {

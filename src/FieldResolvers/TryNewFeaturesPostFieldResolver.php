@@ -1,13 +1,13 @@
 <?php
-namespace PoP\BlockMetadataWP\FieldValueResolvers;
+namespace PoP\BlockMetadataWP\FieldResolvers;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\Facades\Schema\FieldQueryInterpreterFacade;
 use PoP\ComponentModel\Schema\SchemaDefinition;
-use PoP\ComponentModel\FieldValueResolvers\AbstractDBDataFieldValueResolver;
+use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\Posts\TypeResolvers\PostTypeResolver;
 
-class TryNewFeaturesPostFieldValueResolver extends AbstractDBDataFieldValueResolver
+class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
