@@ -2,17 +2,19 @@
 namespace PoP\BlockMetadataWP\FieldResolvers;
 use Leoloso\BlockMetadata\Data;
 use Leoloso\BlockMetadata\Metadata;
-use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\Schema\SchemaDefinition;
-use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
+use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
-use PoP\Posts\TypeResolvers\PostTypeResolver;
+use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
+use PoP\Content\FieldInterfaces\ContentEntityFieldInterfaceResolver;
 
 class PostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
-        return array(PostTypeResolver::class);
+        return [
+            ContentEntityFieldInterfaceResolver::class,
+        ];
     }
 
     public static function getFieldNamesToResolve(): array

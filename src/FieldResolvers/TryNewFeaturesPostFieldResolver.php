@@ -1,17 +1,20 @@
 <?php
 namespace PoP\BlockMetadataWP\FieldResolvers;
-use PoP\Translation\Facades\TranslationAPIFacade;
-use PoP\ComponentModel\Facades\Schema\FieldQueryInterpreterFacade;
+
 use PoP\ComponentModel\Schema\SchemaDefinition;
-use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
+use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
-use PoP\Posts\TypeResolvers\PostTypeResolver;
+use PoP\ComponentModel\Facades\Schema\FieldQueryInterpreterFacade;
+use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
+use PoP\Content\FieldInterfaces\ContentEntityFieldInterfaceResolver;
 
 class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
-        return array(PostTypeResolver::class);
+        return [
+            ContentEntityFieldInterfaceResolver::class,
+        ];
     }
 
     public function resolveCanProcess(TypeResolverInterface $typeResolver, string $fieldName, array $fieldArgs = []): bool
