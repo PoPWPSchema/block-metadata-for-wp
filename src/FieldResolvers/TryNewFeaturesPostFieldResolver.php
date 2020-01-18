@@ -52,7 +52,7 @@ class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
             case 'content':
                 unset($fieldArgs['branch']);
                 unset($fieldArgs['project']);
-                return $typeResolver->resolveValue($resultItem, FieldQueryInterpreterFacade::getInstance()->getField('block-metadata', $fieldArgs), $variables, $expressions, $options);
+                return $typeResolver->resolveValue($resultItem, FieldQueryInterpreterFacade::getInstance()->getField('blockMetadata', $fieldArgs), $variables, $expressions, $options);
         }
 
         return parent::resolveValue($typeResolver, $resultItem, $fieldName, $fieldArgs, $variables, $expressions, $options);
