@@ -44,36 +44,40 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
 
     public function getSchemaFieldArgs(TypeResolverInterface $typeResolver, string $fieldName): array
     {
+        $schemaFieldArgs = parent::getSchemaFieldArgs($typeResolver, $fieldName);
         $translationAPI = TranslationAPIFacade::getInstance();
         switch ($fieldName) {
             case 'blockMetadata':
-                return [
+                return array_merge(
+                    $schemaFieldArgs,
                     [
-                        SchemaDefinition::ARGNAME_NAME => 'blockName',
-                        SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_STRING,
-                        SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Fetch only the block with this name in the post, filtering out all other blocks', 'block-metadata'),
-                    ],
-                    [
-                        SchemaDefinition::ARGNAME_NAME => 'filterBy',
-                        SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_INPUT_OBJECT,
-                        SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Filter the block results based on different properties', 'block-metadata'),
-                        SchemaDefinition::ARGNAME_ARGS => [
-                            [
-                                SchemaDefinition::ARGNAME_NAME => 'blockNameStartsWith',
-                                SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_STRING,
-                                SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Include only blocks with the given name', 'block-metadata'),
-                            ],
-                            [
-                                SchemaDefinition::ARGNAME_NAME => 'metaProperties',
-                                SchemaDefinition::ARGNAME_TYPE => TypeCastingHelpers::makeArray(SchemaDefinition::TYPE_STRING),
-                                SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Include only these block properties in the meta entry from the block', 'block-metadata'),
+                        [
+                            SchemaDefinition::ARGNAME_NAME => 'blockName',
+                            SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_STRING,
+                            SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Fetch only the block with this name in the post, filtering out all other blocks', 'block-metadata'),
+                        ],
+                        [
+                            SchemaDefinition::ARGNAME_NAME => 'filterBy',
+                            SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_INPUT_OBJECT,
+                            SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Filter the block results based on different properties', 'block-metadata'),
+                            SchemaDefinition::ARGNAME_ARGS => [
+                                [
+                                    SchemaDefinition::ARGNAME_NAME => 'blockNameStartsWith',
+                                    SchemaDefinition::ARGNAME_TYPE => SchemaDefinition::TYPE_STRING,
+                                    SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Include only blocks with the given name', 'block-metadata'),
+                                ],
+                                [
+                                    SchemaDefinition::ARGNAME_NAME => 'metaProperties',
+                                    SchemaDefinition::ARGNAME_TYPE => TypeCastingHelpers::makeArray(SchemaDefinition::TYPE_STRING),
+                                    SchemaDefinition::ARGNAME_DESCRIPTION => $translationAPI->__('Include only these block properties in the meta entry from the block', 'block-metadata'),
+                                ]
                             ]
-                        ]
-                    ],
-                ];
+                        ],
+                    ]
+                );
         }
 
-        return parent::getSchemaFieldArgs($typeResolver, $fieldName);
+        return $schemaFieldArgs;
     }
 
     public function resolveValue(TypeResolverInterface $typeResolver, $resultItem, string $fieldName, array $fieldArgs = [], ?array $variables = null, ?array $expressions = null, array $options = [])
