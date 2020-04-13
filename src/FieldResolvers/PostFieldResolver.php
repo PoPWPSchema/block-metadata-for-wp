@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\BlockMetadataWP\FieldResolvers;
 use Leoloso\BlockMetadata\Data;
 use Leoloso\BlockMetadata\Metadata;
