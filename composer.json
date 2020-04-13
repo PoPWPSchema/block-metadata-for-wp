@@ -25,8 +25,8 @@
     ],
     "require": {
         "php" : "~7.1",
-        "getpop/engine-wp": "^1.0@dev",
-        "getpop/posts-wp": "^1.0@dev",
+        "getpop/engine-wp": "~0.1",
+        "getpop/posts-wp": "~0.1",
         "wpackagist-plugin/block-metadata": "^1.0"
     },
     "require-dev": {
