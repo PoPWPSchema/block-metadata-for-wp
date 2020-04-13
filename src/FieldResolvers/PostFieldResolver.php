@@ -21,14 +21,14 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
     public static function getFieldNamesToResolve(): array
     {
         return [
-			'blockMetadata',
+            'blockMetadata',
         ];
     }
 
     public function getSchemaFieldType(TypeResolverInterface $typeResolver, string $fieldName): ?string
     {
         $types = [
-			'blockMetadata' => SchemaDefinition::TYPE_OBJECT,
+            'blockMetadata' => SchemaDefinition::TYPE_OBJECT,
         ];
         return $types[$fieldName] ?? parent::getSchemaFieldType($typeResolver, $fieldName);
     }
@@ -37,7 +37,7 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
     {
         $translationAPI = TranslationAPIFacade::getInstance();
         $descriptions = [
-			'blockMetadata' => $translationAPI->__('Metadata for all blocks contained in the post, split on a block by block basis', 'pop-block-metadata'),
+            'blockMetadata' => $translationAPI->__('Metadata for all blocks contained in the post, split on a block by block basis', 'pop-block-metadata'),
         ];
         return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($typeResolver, $fieldName);
     }
@@ -92,7 +92,7 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
                 if ($blockName = $fieldArgs['blockName']) {
                     $block_metadata = array_filter(
                         $block_metadata,
-                        function($block) use($blockName) {
+                        function ($block) use ($blockName) {
                             return $block['blockName'] == $blockName;
                         }
                     );
@@ -101,18 +101,18 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
                     if ($blockNameStartsWith = $filterBy['blockNameStartsWith']) {
                         $block_metadata = array_filter(
                             $block_metadata,
-                            function($block) use($blockNameStartsWith) {
+                            function ($block) use ($blockNameStartsWith) {
                                 return substr($block['blockName'], 0, strlen($blockNameStartsWith)) == $blockNameStartsWith;
                             }
                         );
                     }
                     if ($metaProperties = $filterBy['metaProperties']) {
                         $block_metadata = array_map(
-                            function($block) use($metaProperties) {
+                            function ($block) use ($metaProperties) {
                                 if ($block['meta']) {
                                     $block['meta'] = array_filter(
                                         $block['meta'],
-                                        function($blockMetaProperty) use($metaProperties) {
+                                        function ($blockMetaProperty) use ($metaProperties) {
                                             return in_array($blockMetaProperty, $metaProperties);
                                         },
                                         ARRAY_FILTER_USE_KEY

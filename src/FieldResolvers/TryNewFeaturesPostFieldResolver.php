@@ -25,14 +25,14 @@ class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
     public static function getFieldNamesToResolve(): array
     {
         return [
-			'content',
+            'content',
         ];
     }
 
     public function getSchemaFieldType(TypeResolverInterface $typeResolver, string $fieldName): ?string
     {
         $types = [
-			'content' => SchemaDefinition::TYPE_STRING,
+            'content' => SchemaDefinition::TYPE_STRING,
         ];
         return $types[$fieldName] ?? parent::getSchemaFieldType($typeResolver, $fieldName);
     }
@@ -41,7 +41,7 @@ class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
     {
         $translationAPI = TranslationAPIFacade::getInstance();
         $descriptions = [
-			'content' => $translationAPI->__('Post\'s content, formatted with its block metadata', 'pop-block-metadata'),
+            'content' => $translationAPI->__('Post\'s content, formatted with its block metadata', 'pop-block-metadata'),
         ];
         return $descriptions[$fieldName] ?? parent::getSchemaFieldDescription($typeResolver, $fieldName);
     }
