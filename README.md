@@ -30,8 +30,6 @@ $ composer require getpop/block-metadata-for-wp dev-master
 }
 ```
 
-([PoP](https://github.com/leoloso/PoP) must be installed)
-
 <!--
 ## Usage
 
