@@ -36,10 +36,7 @@
     "autoload": {
         "psr-4": {
             "PoP\\BlockMetadataWP\\": "src"
-        },
-        "files": [
-            "initialize.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
