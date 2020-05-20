@@ -16,6 +16,14 @@ class Component extends AbstractComponent
     use YAMLServicesTrait;
     // const VERSION = '0.1.0';
 
+    public static function getDependedComponentClasses(): array
+    {
+        return [
+            \PoP\EngineWP\Component::class,
+            \PoP\PostsWP\Component::class,
+        ];
+    }
+
     /**
      * Initialize services
      */

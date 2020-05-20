@@ -1,2 +1,2 @@
 <?php
-\PoP\BlockMetadataWP\Component::init();
+//\PoP\BlockMetadataWP\Component::initialize();
