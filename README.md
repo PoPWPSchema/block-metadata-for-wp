@@ -20,12 +20,13 @@ Via Composer
 composer require getpop/block-metadata-for-wp
 ```
 
-<!--
 ## Usage
 
+Initialize the component:
+
 ``` php
+\PoP\BlockMetadataWP\Component::initialize();
 ```
--->
 
 ## Standards
 
