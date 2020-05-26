@@ -25,7 +25,9 @@ composer require getpop/block-metadata-for-wp
 Initialize the component:
 
 ``` php
-\PoP\BlockMetadataWP\Component::initialize();
+\PoP\Root\ComponentLoader::initializeComponents([
+    \PoP\BlockMetadataWP\Component::class,
+]);
 ```
 
 ## Standards
