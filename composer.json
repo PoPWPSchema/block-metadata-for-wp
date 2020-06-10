@@ -26,12 +26,15 @@
     "require": {
         "php" : "~7.1",
         "getpop/engine-wp": "dev-master",
-        "getpop/posts-wp": "dev-master",
-        "wpackagist-plugin/block-metadata": "^1.0"
+        "getpop/posts-wp": "dev-master"
     },
     "require-dev": {
+        "wpackagist-plugin/block-metadata": "^1.0",
         "phpunit/phpunit": ">=7.0",
         "squizlabs/php_codesniffer": "^3.0"
+    },
+    "suggest": {
+        "wpackagist-plugin/block-metadata": "This plugin is required"
     },
     "autoload": {
         "psr-4": {
