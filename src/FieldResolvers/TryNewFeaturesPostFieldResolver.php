@@ -9,14 +9,14 @@ use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\Facades\Schema\FieldQueryInterpreterFacade;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\Content\FieldInterfaces\ContentEntityFieldInterfaceResolver;
+use PoP\Content\FieldInterfaces\CustomPostFieldInterfaceResolver;
 
 class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
         return [
-            ContentEntityFieldInterfaceResolver::class,
+            CustomPostFieldInterfaceResolver::class,
         ];
     }
 
