@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace PoP\BlockMetadataWP\FieldResolvers;
+
 use Leoloso\BlockMetadata\Data;
 use Leoloso\BlockMetadata\Metadata;
 use PoP\ComponentModel\Schema\SchemaDefinition;
@@ -12,7 +13,7 @@ use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
 use PoP\CustomPosts\FieldInterfaces\CustomPostFieldInterfaceResolver;
 
-class PostFieldResolver extends AbstractDBDataFieldResolver
+class CustomPostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
