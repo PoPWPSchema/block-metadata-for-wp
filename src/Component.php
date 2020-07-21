@@ -19,7 +19,7 @@ class Component extends AbstractComponent
     public static function getDependedComponentClasses(): array
     {
         return [
-            \PoP\CustomPostsWP\Component::class,
+            \PoP\PostsWP\Component::class,
         ];
     }
 

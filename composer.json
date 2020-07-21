@@ -25,7 +25,7 @@
     ],
     "require": {
         "php" : "~7.1",
-        "getpop/customposts-wp": "dev-master"
+        "getpop/posts-wp": "dev-master"
     },
     "require-dev": {
         "wpackagist-plugin/block-metadata": "^1.0",
