@@ -13,7 +13,7 @@ use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
 use PoP\Posts\TypeResolvers\PostTypeResolver;
 
-class pPostFieldResolver extends AbstractDBDataFieldResolver
+class PostFieldResolver extends AbstractDBDataFieldResolver
 {
     public static function getClassesToAttachTo(): array
     {
