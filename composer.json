@@ -1,5 +1,5 @@
 {
-    "name": "getpop/block-metadata-for-wp",
+    "name": "pop-schema/block-metadata-for-wp",
     "type": "library",
     "description": "Integration with WordPress plugin \"Block Metadata\"",
     "keywords": [
@@ -25,7 +25,7 @@
     ],
     "require": {
         "php": "~7.2",
-        "getpop/posts-wp": "dev-master"
+        "pop-schema/posts-wp": "dev-master"
     },
     "require-dev": {
         "wpackagist-plugin/block-metadata": "^1.0",
@@ -38,12 +38,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PoP\\BlockMetadataWP\\": "src"
+            "PoPSchema\\BlockMetadataWP\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PoP\\BlockMetadataWP\\": "tests"
+            "PoPSchema\\BlockMetadataWP\\": "tests"
         }
     },
     "scripts": {

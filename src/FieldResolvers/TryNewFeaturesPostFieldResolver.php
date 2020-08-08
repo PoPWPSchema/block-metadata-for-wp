@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PoP\BlockMetadataWP\FieldResolvers;
+namespace PoPSchema\BlockMetadataWP\FieldResolvers;
 
 use PoP\ComponentModel\Schema\SchemaDefinition;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\Facades\Schema\FieldQueryInterpreterFacade;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\Posts\TypeResolvers\PostTypeResolver;
+use PoPSchema\Posts\TypeResolvers\PostTypeResolver;
 
 class TryNewFeaturesPostFieldResolver extends AbstractDBDataFieldResolver
 {

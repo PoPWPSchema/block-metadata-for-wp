@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoP\BlockMetadataWP\FieldResolvers;
+namespace PoPSchema\BlockMetadataWP\FieldResolvers;
 
 use Leoloso\BlockMetadata\Data;
 use Leoloso\BlockMetadata\Metadata;
@@ -11,7 +11,7 @@ use PoP\ComponentModel\Schema\TypeCastingHelpers;
 use PoP\Translation\Facades\TranslationAPIFacade;
 use PoP\ComponentModel\TypeResolvers\TypeResolverInterface;
 use PoP\ComponentModel\FieldResolvers\AbstractDBDataFieldResolver;
-use PoP\Posts\TypeResolvers\PostTypeResolver;
+use PoPSchema\Posts\TypeResolvers\PostTypeResolver;
 
 class PostFieldResolver extends AbstractDBDataFieldResolver
 {
