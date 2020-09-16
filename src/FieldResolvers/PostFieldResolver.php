@@ -119,18 +119,14 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
                 if ($blockName = $fieldArgs['blockName']) {
                     $block_metadata = array_filter(
                         $block_metadata,
-                        function ($block) use ($blockName) {
-                            return $block['blockName'] == $blockName;
-                        }
+                        fn ($block) => $block['blockName'] == $blockName
                     );
                 }
                 if ($filterBy = $fieldArgs['filterBy']) {
                     if ($blockNameStartsWith = $filterBy['blockNameStartsWith']) {
                         $block_metadata = array_filter(
                             $block_metadata,
-                            function ($block) use ($blockNameStartsWith) {
-                                return substr($block['blockName'], 0, strlen($blockNameStartsWith)) == $blockNameStartsWith;
-                            }
+                            fn ($block) => str_starts_with($block['blockName'], $blockNameStartsWith)
                         );
                     }
                     if ($metaProperties = $filterBy['metaProperties']) {
@@ -139,9 +135,7 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
                                 if ($block['meta']) {
                                     $block['meta'] = array_filter(
                                         $block['meta'],
-                                        function ($blockMetaProperty) use ($metaProperties) {
-                                            return in_array($blockMetaProperty, $metaProperties);
-                                        },
+                                        fn ($blockMetaProperty) => in_array($blockMetaProperty, $metaProperties),
                                         ARRAY_FILTER_USE_KEY
                                     );
                                 }
