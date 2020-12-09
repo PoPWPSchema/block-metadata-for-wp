@@ -132,7 +132,7 @@ class PostFieldResolver extends AbstractDBDataFieldResolver
                     if ($metaProperties = $filterBy['metaProperties']) {
                         $block_metadata = array_map(
                             function ($block) use ($metaProperties) {
-                                if ($block['meta']) {
+                                if (isset($block['meta'])) {
                                     $block['meta'] = array_filter(
                                         $block['meta'],
                                         fn ($blockMetaProperty) => in_array($blockMetaProperty, $metaProperties),
