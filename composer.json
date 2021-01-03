@@ -2,10 +2,7 @@
     "name": "pop-schema/block-metadata-for-wp",
     "type": "library",
     "description": "Integration with WordPress plugin \"Block Metadata\"",
-    "keywords": [
-        "PoP",
-        "block-metadata-for-wp"
-    ],
+    "keywords": ["PoP", "block-metadata-for-wp"],
     "homepage": "https://github.com/PoPSchema/block-metadata-for-wp",
     "license": "MIT",
     "authors": [
@@ -30,7 +27,7 @@
     "require-dev": {
         "wpackagist-plugin/block-metadata": "^1.0",
         "phpunit/phpunit": ">=9.3",
-        "rector/rector": "^0.8.17",
+        "rector/rector": "^0.9",
         "squizlabs/php_codesniffer": "^3.0",
         "szepeviktor/phpstan-wordpress": "^0.6.2",
         "johnpbloch/wordpress": ">=5.5"
@@ -53,7 +50,7 @@
         "check-style": "phpcs src tests",
         "fix-style": "phpcbf src tests",
         "analyse": "phpstan analyse -c phpstan.neon.dist",
-        "downgrade-code": "rector process --dry-run --ansi"
+        "preview-code-downgrade": "rector process --dry-run --ansi"
     },
     "extra": {
         "wordpress-install-dir": "vendor/wordpress/wordpress",
