@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PoPSchema\BlockMetadataWP\FieldResolvers\ObjectType;
+namespace PoPWPSchema\BlockMetadataWP\FieldResolvers\ObjectType;
 
 use Leoloso\BlockMetadata\Data;
 use Leoloso\BlockMetadata\Metadata;
@@ -11,7 +11,7 @@ use PoP\ComponentModel\Schema\SchemaTypeModifiers;
 use PoP\ComponentModel\TypeResolvers\ConcreteTypeResolverInterface;
 use PoP\ComponentModel\TypeResolvers\ObjectType\ObjectTypeResolverInterface;
 use PoP\ComponentModel\TypeResolvers\ScalarType\StringScalarTypeResolver;
-use PoPSchema\Posts\TypeResolvers\ObjectType\PostObjectTypeResolver;
+use PoPCMSSchema\Posts\TypeResolvers\ObjectType\PostObjectTypeResolver;
 use PoP\Engine\TypeResolvers\ScalarType\JSONObjectScalarTypeResolver;
 
 class PostObjectTypeFieldResolver extends AbstractObjectTypeFieldResolver
